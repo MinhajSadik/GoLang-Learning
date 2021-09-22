@@ -13,4 +13,3 @@ func main() {
         fmt.Printf("The character %c is in position %d \n", character, index)
     }
 }
-
