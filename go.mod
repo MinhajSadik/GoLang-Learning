@@ -1,3 +1,3 @@
-module example/GoLang-Learning
+module example.com/GoLang-Learning
 
 go 1.17
