@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // func myEarning(name string) string{
 //     return name
@@ -46,9 +44,33 @@ import (
 
 // var scores = 99.9
 
+// Group A type => strings, ints, bools, floats, arrays, structs
+// func updateName(x string){
+//     x = "Ahmed"
+//     fmt.Println("main", x)
+// }
 
+func updateMenu(y map[string] float64){
+    y["coffee"] = 2.99
+    y["lolipop"] = 2.09
+}
 
 func main() {
+
+    // Group A type can't change => strings, ints, bools, floats, arrays, structs
+    // name:= "Sadik"
+    // updateName(name)
+    // fmt.Println(name)
+
+    // Group B type change and add => slices, map, functions
+    menu:= map[string] float64{
+        "ice creame": 4.93,
+        "cocoa": 30.88,
+    }
+    updateMenu(menu)
+    fmt.Println(menu)
+
+
     // fmt.Print("hello world -- ")
     // s := "Hello World!"
     // fmt.Println(s)
@@ -68,27 +90,27 @@ func main() {
     //     fmt.Println(v)
     // }
 
-    menu:= map[string]float64{
-		"mengo": 39,
-		"orange": 90,
-		"apple": 32,
-	}
-	fmt.Println(menu)
-	fmt.Println(menu["orange"])
+    // menu:= map[string]float64{
+	// 	"mengo": 39,
+	// 	"orange": 90,
+	// 	"apple": 32,
+	// }
+	// fmt.Println(menu)
+	// fmt.Println(menu["orange"])
 
-    phoneBook:= map[int]string{
-		182: "minhaj",
-		990: "sadik",
-		902: "Ahmed",
-	}
-	fmt.Println(phoneBook)
-	fmt.Println(phoneBook[182])
+    // phoneBook:= map[int]string{
+	// 	182: "minhaj",
+	// 	990: "sadik",
+	// 	902: "Ahmed",
+	// }
+	// fmt.Println(phoneBook)
+	// fmt.Println(phoneBook[182])
 
-    phoneBook[990] = "Anika"
-    fmt.Println(phoneBook)
+    // phoneBook[990] = "Anika"
+    // fmt.Println(phoneBook)
     
-    phoneBook[902] = "Ahmed"
-    fmt.Println(phoneBook)
+    // phoneBook[902] = "Ahmed"
+    // fmt.Println(phoneBook)
 
 	// // looping map
 	// for k, v:= range menu{
