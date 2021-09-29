@@ -77,12 +77,18 @@ func main() {
 	fmt.Println(menu["orange"])
 
     phoneBook:= map[int]string{
-		1829102: "minhaj",
-		9903232: "sadik",
-		9029303: "Ahmed",
+		182: "minhaj",
+		990: "sadik",
+		902: "Ahmed",
 	}
 	fmt.Println(phoneBook)
-	fmt.Println(phoneBook[9029303])
+	fmt.Println(phoneBook[182])
+
+    phoneBook[990] = "Anika"
+    fmt.Println(phoneBook)
+    
+    phoneBook[902] = "Ahmed"
+    fmt.Println(phoneBook)
 
 	// // looping map
 	// for k, v:= range menu{
