@@ -56,33 +56,38 @@ import "fmt"
 //     y["lolipop"] = 2.09
 // }
 
-func updateName(x *string){
-    *x = "Ahmed"
-    // fmt.Println("'main'", x)
-}
+// func updateName(x *string){
+//     *x = "Ahmed"
+//     // fmt.Println("'main'", x)
+// }
 
 
 func main() {
 
-    name:= "Sadik"
+    // //Struct in GoLang
+    mybill:= newBill("minhajSadik")
+    fmt.Println(mybill)
 
+    // //Pointer in GoLang
+    // name:= "Sadik"
     // updateName(name)
     // fmt.Println("memory address of 'name' is:", &name)
-
-    m:= &name
+    // m:= &name
     // fmt.Println("memory address of 'm':", m)
     // fmt.Println("value at memory address of 'm' ", *m)
 
-    fmt.Println(name)
-    updateName(m)
-    fmt.Println(name)
+    // fmt.Println(name)
+    // updateName(m)
+    // fmt.Println(name)
 
-    // Group A type can't change => strings, ints, bools, floats, arrays, structs
+
+
+    // // Group A type can't change => strings, ints, bools, floats, arrays, structs
     // name:= "Sadik"
     // updateName(name)
     // fmt.Println(name)
 
-    // Group B type change and add => slices, map, functions
+    // // Group B type change and add => slices, map, functions
     // menu:= map[string] float64{
     //     "ice creame": 4.93,
     //     "cocoa": 30.88,
