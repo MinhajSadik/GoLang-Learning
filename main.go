@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 
 	"example.com/GoLang-Learning/myLearning"
 )
@@ -21,7 +20,7 @@ func main() {
     s := "Hello World!"
     fmt.Println(s)
     x := "Samira"
-    fmt.Println(myLearning.Hello(), myEarning(x), getName(32))
+    fmt.Println(myLearning.Hello(), myEarning(x), getName(22))
 
     // var s string = "Hello, World"
 
@@ -29,12 +28,12 @@ func main() {
     //     fmt.Printf("The character %c is in position %d \n", value, index)
     // }
 
-    var a int32 = 100
-    var b int64 = int64(a)
-    fmt.Println(b)
-    var str int = 32
-    var d string = strconv.Itoa(str)
-    fmt.Printf("%v, %T \n", d , d)
+    // var a int32 = 100
+    // var b int64 = int64(a)
+    // fmt.Println(b)
+    // var str int = 32
+    // var d string = strconv.Itoa(str)
+    // fmt.Printf("%v, %T \n", d , d)
 
 }
 
