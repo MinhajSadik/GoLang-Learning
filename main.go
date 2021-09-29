@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // func myEarning(name string) string{
 //     return name
 // }
@@ -54,7 +56,26 @@ package main
 //     y["lolipop"] = 2.09
 // }
 
+func updateName(x *string){
+    *x = "Ahmed"
+    // fmt.Println("'main'", x)
+}
+
+
 func main() {
+
+    name:= "Sadik"
+
+    // updateName(name)
+    // fmt.Println("memory address of 'name' is:", &name)
+
+    m:= &name
+    // fmt.Println("memory address of 'm':", m)
+    // fmt.Println("value at memory address of 'm' ", *m)
+
+    fmt.Println(name)
+    updateName(m)
+    fmt.Println(name)
 
     // Group A type can't change => strings, ints, bools, floats, arrays, structs
     // name:= "Sadik"
