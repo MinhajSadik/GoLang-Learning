@@ -46,6 +46,8 @@ func getInitals(n string) (string, string){
     return initials[0], "_"
 }
 
+var scores = 99.9
+
 func main() {
     // fmt.Print("hello world -- ")
     // s := "Hello World!"
@@ -57,6 +59,14 @@ func main() {
     // sayGreeting("Minhaj")
     // sayGreeting("Minhaj")
     // sayBye("Ahmed")
+    sayHello("Minhaj")
+
+    showScore()
+
+    for _, v:= range points{
+        fmt.Println(v)
+    }
+
 
     fn1, sn1:= getInitals("Minhaj Sadik")
     fmt.Println(fn1, sn1)
