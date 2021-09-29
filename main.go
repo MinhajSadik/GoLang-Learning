@@ -1,5 +1,13 @@
 package main
 
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
 // func myEarning(name string) string{
 //     return name
 // }
@@ -60,42 +68,77 @@ package main
 // }
 
 // //helper function
-// func getInput(prompt string, r *bufio.Reader) (string, error) {
-//     fmt.Print(prompt)
-//     input, err := r.ReadString('\n')
-//     return strings.TrimSpace(input), err
+func getInput(prompt string, r *bufio.Reader) (string, error) {
+    fmt.Print(prompt)
+    input, err := r.ReadString('\n')
+    return strings.TrimSpace(input), err
 
-// }
+}
 
 // // user input
-// func createBill() bill{
-//     reader := bufio.NewReader(os.Stdin)
+func createBill() bill{
+    reader := bufio.NewReader(os.Stdin)
 
-//     // fmt.Print("Create a new bill name: ")
-//     // name, _ := reader.ReadString('\n')
-//     // name = strings.TrimSpace(name)
-//     name, _ := getInput("Created a new bill name: ", reader)
+    // fmt.Print("Create a new bill name: ")
+    // name, _ := reader.ReadString('\n')
+    // name = strings.TrimSpace(name)
+    name, _ := getInput("Created a new bill name: ", reader)
 
-//     b:= newBill(name)
-//     fmt.Println("Bill created - ", b.name)
-
-//     return b
-// }
+    b:= newBill(name)
+    fmt.Println("Bill created - ", b.name)
+    
+    return b
+}
 // // prompt
-// func promptOptions(b bill){
-//     reader := bufio.NewReader(os.Stdin)
+func promptOptions(b bill){
+    reader := bufio.NewReader(os.Stdin)
 
-//     opt, _:= getInput("Choose Options (a - add item, s - save item, t - add tip):", reader)
-//     fmt.Println(opt)
-// }
+    opt, _:= getInput("Choose Options (a - add item, s - save item, t - add tip):", reader)
+    // fmt.Println(opt)
+    switch opt {
+        case "a":
+            name, _ := getInput("Item Name: ", reader)
+            price, _ := getInput("Item Price: ", reader)
+
+            p, err := strconv.ParseFloat(price, 64)
+
+            if err != nil {
+                fmt.Println("The Price is invalid")
+                promptOptions(b)
+            }
+            b.addItem(name, p)
+
+            fmt.Println("item added", name, price)
+
+        case "t":
+            tip, _ := getInput("Enter Your Tip($): ", reader)
+            t, err := strconv.ParseFloat(tip, 64)
+
+            if err != nil {
+                fmt.Println("The Price is invalid")
+                promptOptions(b)
+            }
+            b.updateTip(t)
+
+            fmt.Println("tip added--", t)
+            promptOptions(b)
+
+        case "s":
+            fmt.Println("you choose save the bill", b)
+            
+        default: fmt.Println("your haven't any options...")
+        promptOptions(b)
+
+    }
+}
 
 
 func main() {
 
     // // user input 
-    // mybill := createBill()
-    // promptOptions(mybill)
-    // fmt.Println(mybill)
+    mybill := createBill()
+    promptOptions(mybill)
+    fmt.Println(mybill)
 
     // // Receiver Functions with Pointers
     // mybill:= newBill("minhajSadik")
@@ -113,7 +156,7 @@ func main() {
 
     // mybill:= newBill("minhajSadik")
     // fmt.Println(mybill)
-    // mybill.format()
+    mybill.format()
     // fmt.Println(mybill.format())
 
 
