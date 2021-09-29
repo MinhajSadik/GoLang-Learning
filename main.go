@@ -2,25 +2,45 @@ package main
 
 import (
 	"fmt"
-
-	"example.com/GoLang-Learning/myLearning"
 )
 
+// func myEarning(name string) string{
+//     return name
+// }
 
-func myEarning(name string) string{
-    return name
+// func getName(age int) int{
+//     return age
+// }
+
+func sayGreeting(n string) {
+    fmt.Printf("Good Morning %v \n", n)
 }
 
-func getName(age int) int{
-    return age
+func sayBye(n string) {
+    fmt.Printf("Goodbye %v \n", n)
+}
+
+func cycleNames(n []string, f func(string)){
+    for _, v := range n {
+        f(v)
+    }
 }
 
 func main() {
-    fmt.Print("hello world -- ")
-    s := "Hello World!"
-    fmt.Println(s)
-    x := "Samira"
-    fmt.Println(myLearning.Hello(), myEarning(x), getName(22))
+    // fmt.Print("hello world -- ")
+    // s := "Hello World!"
+    // fmt.Println(s)
+    // x := "Samira"
+    // fmt.Println(myLearning.Hello(), myEarning(x), getName(22))
+
+
+    // sayGreeting("Minhaj")
+    // sayGreeting("Minhaj")
+    // sayBye("Ahmed")
+
+    cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayGreeting)
+    cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayBye)
+
 
     // var s string = "Hello, World"
 
