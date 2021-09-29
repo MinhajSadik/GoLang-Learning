@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"strings"
 )
 
 // func myEarning(name string) string{
@@ -14,39 +12,41 @@ import (
 //     return age
 // }
 
-func sayGreeting(n string) {
-    fmt.Printf("Good Morning %v \n", n)
-}
+// func sayGreeting(n string) {
+//     fmt.Printf("Good Morning %v \n", n)
+// }
 
-func sayBye(n string) {
-    fmt.Printf("Goodbye %v \n", n)
-}
+// func sayBye(n string) {
+//     fmt.Printf("Goodbye %v \n", n)
+// }
 
-func cycleNames(n []string, f func(string)){
-    for _, v := range n {
-        f(v)
-    }
-}
+// func cycleNames(n []string, f func(string)){
+//     for _, v := range n {
+//         f(v)
+//     }
+// }
 
-func circleArea(r float64) float64{
-    return math.Pi * r * r
-}
+// func circleArea(r float64) float64{
+//     return math.Pi * r * r
+// }
 
-func getInitals(n string) (string, string){
-    s:= strings.ToUpper(n)
-    names:= strings.Split(s, " ")
+// func getInitals(n string) (string, string){
+//     s:= strings.ToUpper(n)
+//     names:= strings.Split(s, " ")
 
-    var initials []string
-    for _, v:= range names{
-        initials = append(initials, v[:1])
-    }
-    if len(initials) > 1 {
-        return initials[0], initials[1]
-    }
-    return initials[0], "_"
-}
+//     var initials []string
+//     for _, v:= range names{
+//         initials = append(initials, v[:1])
+//     }
+//     if len(initials) > 1 {
+//         return initials[0], initials[1]
+//     }
+//     return initials[0], "_"
+// }
 
-var scores = 99.9
+// var scores = 99.9
+
+
 
 func main() {
     // fmt.Print("hello world -- ")
@@ -59,33 +59,54 @@ func main() {
     // sayGreeting("Minhaj")
     // sayGreeting("Minhaj")
     // sayBye("Ahmed")
-    sayHello("Minhaj")
 
-    showScore()
+    // sayHello("Minhaj")
+    // showScore()
+    // goMap()
 
-    for _, v:= range points{
-        fmt.Println(v)
-    }
+    // for _, v:= range points{
+    //     fmt.Println(v)
+    // }
+
+    menu:= map[string]float64{
+		"mengo": 39,
+		"orange": 90,
+		"apple": 32,
+	}
+	fmt.Println(menu)
+	fmt.Println(menu["orange"])
+
+    phoneBook:= map[int]string{
+		1829102: "minhaj",
+		9903232: "sadik",
+		9029303: "Ahmed",
+	}
+	fmt.Println(phoneBook)
+	fmt.Println(phoneBook[9029303])
+
+	// // looping map
+	// for k, v:= range menu{
+	// 	fmt.Println(k, "-", v)
+	// }
+
+    // fn1, sn1:= getInitals("Minhaj Sadik")
+    // fmt.Println(fn1, sn1)
+
+    // fn2, sn2:= getInitals("Amina Anika")
+    // fmt.Println(fn2, sn2)
+
+    // fn3, sn3:= getInitals("ANIKA")
+    // fmt.Println(fn3, sn3)
 
 
-    fn1, sn1:= getInitals("Minhaj Sadik")
-    fmt.Println(fn1, sn1)
+    // cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayGreeting)
+    // cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayBye)
 
-    fn2, sn2:= getInitals("Amina Anika")
-    fmt.Println(fn2, sn2)
+    // a1 := circleArea(10.8)
+    // a2 := circleArea(10)
 
-    fn3, sn3:= getInitals("ANIKA")
-    fmt.Println(fn3, sn3)
-
-
-    cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayGreeting)
-    cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayBye)
-
-    a1 := circleArea(10.8)
-    a2 := circleArea(10)
-
-    fmt.Println(a1, a2)
-    fmt.Printf("circle 1 is %0.3f and circle 2 is %0.3f\n", a1, a2)
+    // fmt.Println(a1, a2)
+    // fmt.Printf("circle 1 is %0.3f and circle 2 is %0.3f\n", a1, a2)
 
 
 
