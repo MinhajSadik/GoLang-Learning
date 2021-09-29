@@ -8,37 +8,33 @@ import (
 )
 
 
+func myEarning(name string) string{
+    return name
+}
+
+func getName(age int) int{
+    return age
+}
+
 func main() {
     fmt.Print("hello world -- ")
     s := "Hello World!"
     fmt.Println(s)
-    fmt.Println(myLearning.Hello())
+    x := "Samira"
+    fmt.Println(myLearning.Hello(), myEarning(x), getName(32))
 
     // var s string = "Hello, World"
 
-    for index, character := range(s){
-        fmt.Printf("The character %c is in position %d \n", character, index)
-    }
+    // for index, value := range(s){
+    //     fmt.Printf("The character %c is in position %d \n", value, index)
+    // }
 
-}
-
-
-// func Sqrt(x float64) float64 {
-//     z := 0.0
-//     for i := 0; i < 1000; i++ {
-//         z -= (z*z - x) / (2 * x)
-//     }
-//     return z
-// }
-
-
-func Learing() string {
     var a int32 = 100
     var b int64 = int64(a)
     fmt.Println(b)
     var str int = 32
     var d string = strconv.Itoa(str)
-    fmt.Println(str, d)
+    fmt.Printf("%v, %T \n", d , d)
 
-    return "true"
 }
+
