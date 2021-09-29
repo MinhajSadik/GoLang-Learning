@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"strings"
 )
 
 // func myEarning(name string) string{
@@ -31,6 +32,20 @@ func circleArea(r float64) float64{
     return math.Pi * r * r
 }
 
+func getInitals(n string) (string, string){
+    s:= strings.ToUpper(n)
+    names:= strings.Split(s, " ")
+
+    var initials []string
+    for _, v:= range names{
+        initials = append(initials, v[:1])
+    }
+    if len(initials) > 1 {
+        return initials[0], initials[1]
+    }
+    return initials[0], "_"
+}
+
 func main() {
     // fmt.Print("hello world -- ")
     // s := "Hello World!"
@@ -42,6 +57,16 @@ func main() {
     // sayGreeting("Minhaj")
     // sayGreeting("Minhaj")
     // sayBye("Ahmed")
+
+    fn1, sn1:= getInitals("Minhaj Sadik")
+    fmt.Println(fn1, sn1)
+
+    fn2, sn2:= getInitals("Amina Anika")
+    fmt.Println(fn2, sn2)
+
+    fn3, sn3:= getInitals("ANIKA")
+    fmt.Println(fn3, sn3)
+
 
     cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayGreeting)
     cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayBye)
