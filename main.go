@@ -64,9 +64,18 @@ import "fmt"
 
 func main() {
 
-    // //Struct in GoLang
+    // Recevier Function in Format Bills
     mybill:= newBill("minhajSadik")
-    fmt.Println(mybill)
+    // fmt.Println(mybill)
+
+    // mybill.format()
+    fmt.Println(mybill.format())
+
+
+    // //Struct in GoLang
+    // mybill:= newBill("minhajSadik")
+    // fmt.Println(mybill)
+
 
     // //Pointer in GoLang
     // name:= "Sadik"
