@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 // func myEarning(name string) string{
@@ -26,6 +27,10 @@ func cycleNames(n []string, f func(string)){
     }
 }
 
+func circleArea(r float64) float64{
+    return math.Pi * r * r
+}
+
 func main() {
     // fmt.Print("hello world -- ")
     // s := "Hello World!"
@@ -41,9 +46,15 @@ func main() {
     cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayGreeting)
     cycleNames([]string{"Minhaj", "Ahmed", "Sadik"}, sayBye)
 
+    a1 := circleArea(10.8)
+    a2 := circleArea(10)
+
+    fmt.Println(a1, a2)
+    fmt.Printf("circle 1 is %0.3f and circle 2 is %0.3f\n", a1, a2)
+
+
 
     // var s string = "Hello, World"
-
     // for index, value := range(s){
     //     fmt.Printf("The character %c is in position %d \n", value, index)
     // }
