@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func myEarning(name string) string{
 //     return name
 // }
@@ -61,15 +59,62 @@ import "fmt"
 //     // fmt.Println("'main'", x)
 // }
 
+// //helper function
+// func getInput(prompt string, r *bufio.Reader) (string, error) {
+//     fmt.Print(prompt)
+//     input, err := r.ReadString('\n')
+//     return strings.TrimSpace(input), err
+
+// }
+
+// // user input
+// func createBill() bill{
+//     reader := bufio.NewReader(os.Stdin)
+
+//     // fmt.Print("Create a new bill name: ")
+//     // name, _ := reader.ReadString('\n')
+//     // name = strings.TrimSpace(name)
+//     name, _ := getInput("Created a new bill name: ", reader)
+
+//     b:= newBill(name)
+//     fmt.Println("Bill created - ", b.name)
+
+//     return b
+// }
+// // prompt
+// func promptOptions(b bill){
+//     reader := bufio.NewReader(os.Stdin)
+
+//     opt, _:= getInput("Choose Options (a - add item, s - save item, t - add tip):", reader)
+//     fmt.Println(opt)
+// }
+
 
 func main() {
 
-    // Recevier Function in Format Bills
-    mybill:= newBill("minhajSadik")
+    // // user input 
+    // mybill := createBill()
+    // promptOptions(mybill)
     // fmt.Println(mybill)
 
+    // // Receiver Functions with Pointers
+    // mybill:= newBill("minhajSadik")
+
+    // mybill.addItem("onion", 32)
+    // mybill.addItem("orange", 29)
+    // mybill.addItem("mango", 20)
+    // mybill.addItem("apple", 23)
+    // mybill.addItem("juice", 39)
+
+    // mybill.updateTip(10)
+    // fmt.Println(mybill.format())
+
+    // // Recevier Function in Format Bills
+
+    // mybill:= newBill("minhajSadik")
+    // fmt.Println(mybill)
     // mybill.format()
-    fmt.Println(mybill.format())
+    // fmt.Println(mybill.format())
 
 
     // //Struct in GoLang
