@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func myEarning(name string) string{
 //     return name
 // }
@@ -50,10 +48,11 @@ import "fmt"
 //     fmt.Println("main", x)
 // }
 
-func updateMenu(y map[string] float64){
-    y["coffee"] = 2.99
-    y["lolipop"] = 2.09
-}
+// Group B type change and add => slices, map, functions
+// func updateMenu(y map[string] float64){
+//     y["coffee"] = 2.99
+//     y["lolipop"] = 2.09
+// }
 
 func main() {
 
@@ -63,12 +62,12 @@ func main() {
     // fmt.Println(name)
 
     // Group B type change and add => slices, map, functions
-    menu:= map[string] float64{
-        "ice creame": 4.93,
-        "cocoa": 30.88,
-    }
-    updateMenu(menu)
-    fmt.Println(menu)
+    // menu:= map[string] float64{
+    //     "ice creame": 4.93,
+    //     "cocoa": 30.88,
+    // }
+    // updateMenu(menu)
+    // fmt.Println(menu)
 
 
     // fmt.Print("hello world -- ")
