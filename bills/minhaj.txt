@@ -1,0 +1,4 @@
+Bill breakedown: 
+pic:                      ...$4.9 
+cake:                     ...$9.3 
+                   total: ...$14.20
