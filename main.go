@@ -72,7 +72,6 @@ func getInput(prompt string, r *bufio.Reader) (string, error) {
     fmt.Print(prompt)
     input, err := r.ReadString('\n')
     return strings.TrimSpace(input), err
-
 }
 
 // // user input
@@ -94,6 +93,7 @@ func promptOptions(b bill){
     reader := bufio.NewReader(os.Stdin)
 
     opt, _:= getInput("Choose Options (a - add item, s - save item, t - add tip):", reader)
+    
     // fmt.Println(opt)
     switch opt {
         case "a":
@@ -124,7 +124,8 @@ func promptOptions(b bill){
             promptOptions(b)
 
         case "s":
-            fmt.Println("you choose save the bill--", b)
+            b.save()
+            fmt.Println("you save the file successfully", b.name)
 
         default: fmt.Println("your haven't any options...")
         promptOptions(b)
@@ -149,7 +150,7 @@ func main() {
     // mybill.addItem("apple", 23)
     // mybill.addItem("juice", 39)
 
-    // mybill.updateTip(10)
+    mybill.updateTip(3)
     // fmt.Println(mybill.format())
 
     // // Recevier Function in Format Bills
