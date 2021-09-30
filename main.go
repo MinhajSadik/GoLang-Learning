@@ -93,7 +93,7 @@ func promptOptions(b bill){
     reader := bufio.NewReader(os.Stdin)
 
     opt, _:= getInput("Choose Options (a - add item, s - save item, t - add tip):", reader)
-    
+
     // fmt.Println(opt)
     switch opt {
         case "a":
@@ -144,10 +144,11 @@ func main() {
     // // Receiver Functions with Pointers
     // mybill:= newBill("minhajSadik")
 
-    // mybill.addItem("onion", 32)
-    // mybill.addItem("orange", 29)
-    // mybill.addItem("mango", 20)
-    // mybill.addItem("apple", 23)
+
+    mybill.addItem("onion", 32)
+    mybill.addItem("orange", 29)
+    mybill.addItem("mango", 20)
+    mybill.addItem("apple", 23)
     // mybill.addItem("juice", 39)
 
     mybill.updateTip(3)
